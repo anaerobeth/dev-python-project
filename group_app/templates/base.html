@@ -11,8 +11,8 @@
             {% block body %}{% endblock %}
         </div>
         <div id="nav">
-            Navigation<br />
-            <ul>
+            <h4>Navigation</h4>
+            <ul class="nav">
                 {% block nav %}{% endblock %}
                 <li><a href="{{url_for('main')}}">index</a></li>
                 <li><a href="/about/">about</a></li>
@@ -21,6 +21,7 @@
                 {% if 'username' in session %}
                 <li><a href="{{url_for('gallery')}}">gallery</a></li>
                 <li><a href="{{url_for('videos')}}">videos</a></li>
+                <li><a href="{{url_for('tutorial')}}">tutorial</a></li>
                 <li><a href="{{url_for('login')}}">logout</a>
                 {% else %}
                 <li><a href="{{url_for('login')}}">login</a>
