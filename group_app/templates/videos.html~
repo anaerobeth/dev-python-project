@@ -3,7 +3,7 @@
 
     <h2>Videos</h2>
     <p>Here are some Python/Flask Tutorials!</p>
-<div class="container">
+<div class="container pull-left">
 	<div style="padding:10px 10px">
     <iframe width="400" height="315" src="http://www.youtube.com/embed/iSrZ6r7hwdM" frameborder="0" allowfullscreen></iframe>
 	</div>
