@@ -1,6 +1,6 @@
 import flask, flask.views
 
-users = {'beth':'rampup'}
+users = {'beth':'rampup','tracy':'fakemeat'}
 
 class Login(flask.views.MethodView):
     def get(self):

@@ -8,6 +8,7 @@ import settings
 from login import Login
 from main import Main
 from gallery import Gallery
+from videos import Videos
 
 app = flask.Flask(__name__)
 app.secret_key = settings.secret_key
@@ -26,6 +27,9 @@ app.add_url_rule('/gallery/',
 app.add_url_rule('/login/',
                 view_func=Login.as_view('login'),
                 methods=['GET', 'POST'])
+app.add_url_rule('/videos/',
+                view_func=Videos.as_view('videos'),
+                methods=['GET'])
 
 
 @app.errorhandler(404)
