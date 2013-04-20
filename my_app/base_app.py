@@ -1,5 +1,5 @@
-# Group web app
-# Name: Beth and Tracy
+# Individual web app
+# Name: Beth
 
 import flask
 import settings
@@ -7,7 +7,7 @@ import settings
 #Views
 from login import Login
 from main import Main
-from gallery import Gallery
+from flashcard import Flashcard
 
 app = flask.Flask(__name__)
 app.secret_key = settings.secret_key
@@ -20,8 +20,8 @@ app.add_url_rule('/',
 app.add_url_rule('/<page>/',
                 view_func=Main.as_view('main'),
                 methods=['GET'])
-app.add_url_rule('/gallery/',
-                view_func=Gallery.as_view('gallery'),
+app.add_url_rule('/flashback/',
+                view_func=Flashcard.as_view('flashback'),
                 methods=['GET'])
 app.add_url_rule('/login/',
                 view_func=Login.as_view('login'),

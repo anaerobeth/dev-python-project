@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Group Project</title>
+        <title>Individual Project</title>
         <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" type="text/css" href="/static/style.css" />
         <script type="text/javascript" src="/static/jquery-1.7.1.min.js"></script>
     </head>
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+        }
+    </style>
     <body>
         <div id="content">
             {% block body %}{% endblock %}
         </div>
         <div id="nav">
-            Navigation<br />
+            <p>Navigation</p>
             <ul>
                 {% block nav %}{% endblock %}
-                <li><a href="{{url_for('main')}}">index</a></li>
-                <li><a href="/about/">about</a></li>
-                <li><a href="/contact/">contact</a></li>
-                <hr id="nav"/>
+                <li><a href="{{url_for('main')}}">Index</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/contact/">Contact</a></li>
                 {% if 'username' in session %}
-                <li><a href="{{url_for('gallery')}}">gallery</a></li>
-                <li><a href="{{url_for('login')}}">logout</a>
+                <li><a href="{{url_for('flashcard')}}">Flashcards</a></li>
+                <li><a href="{{url_for('login')}}">Logout</a>
                 {% else %}
-                <li><a href="{{url_for('login')}}">login</a>
+                <li><a href="{{url_for('login')}}">Login</a>
                 {% endif %}
             </ul>
         </div>
