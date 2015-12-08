@@ -5,4 +5,4 @@ RampUp Dev Program
 
 Group app by Tracy Moscato and Beth Tenorio
 
-Implemented in Python and Flash
+Implemented in Python and Flask
